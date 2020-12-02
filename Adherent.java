@@ -120,7 +120,6 @@ public class Adherent {
 	}
 	
 	public void rendre(Document doc) {
-		boolean ok=false;
 		if(doc == null) {
 			System.err.println("ce document n'existe pas");
 		}

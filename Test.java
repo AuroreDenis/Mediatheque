@@ -6,8 +6,9 @@ public class Test {
 	public static void main(String[] args) {
 		
 		
-		// Création d'une liste pour stocker les documents
+		// Création d'une table de hash pour stocker les documents
 		Mediatheque l = new  Mediatheque();
+		
 
 		int numAdh=1;
 		
@@ -24,38 +25,27 @@ public class Test {
 		CD cd6 = new CD("S16", Statut.DISPONIBLE, 6, null, "Woodkid", "indie pop");
 		
 	
+			
+		Elinor.emprunter(livre1);
+		Elinor.emprunter(livre2);	
+		Elinor.emprunter(cd6);
 		
-	Elinor.emprunter(livre1);
-	Elinor.emprunter(livre2);	
-	Elinor.emprunter(cd6);
+		System.out.println(Elinor.afficher());
+		
+		Elinor.rendre(livre1);
 	
-	System.out.println(Elinor.afficher());
+		l.ajouterLivre(livre1.getNumero(), livre1);
+		l.ajouterLivre(livre2.getNumero(), livre2);
+		l.ajouterCD(cd4.getNumero(), cd4);
+		l.ajouterCD(cd5.getNumero(), cd5);
+		l.ajouterCD(cd6.getNumero(), cd6);
+		l.ajouterDVD(dvd3.getNumero(), dvd3);
+		
+		System.out.println(l.affiche());
+		
+		System.out.println(l.afficheLeDoc(3));
+			
 	
-	Elinor.rendre(livre1);
-
-		
-		//ajout des documents dans la liste
-		l.addLivre(livre1);
-		l.addLivre(livre2);
-		l.addDVD(dvd3);
-		l.addCD(cd4);
-		l.addCD(cd5);
-		l.addCD(cd6);
-		
-		cd6.emprunt();
-		cd4.emprunt();
-		
-		
-//		affichage des documents
-		int i=0;
-		
-//		while(i<l.taille()) {
-//			System.out.println((i+1) +" - " + l.get(i).afficher());
-//			i++;
-//			}
-		
-		
-	l.map();
 		
 	} // fin main
 		

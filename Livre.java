@@ -3,8 +3,6 @@
  */
 package fr.eni.mediatheque;
 
-import java.util.ArrayList;
-
 /**
  * @author aurore
  *

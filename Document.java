@@ -1,6 +1,6 @@
 package fr.eni.mediatheque;
 
-public class Document {
+public  class  Document {
 
 	private String titre;
 	private Statut statut;
